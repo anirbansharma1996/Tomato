@@ -46,7 +46,7 @@ const PlaceOrder = () => {
       window.location.replace(session_url)
     }
     else{
-      alert("Error")
+      alert("You need To Login first !!!")
     }
   };
 
