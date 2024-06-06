@@ -27,7 +27,7 @@ const Footer = () => {
                 <ul>
                     <li>+91 735101</li>
                     <li>contact@tomato.com</li>
-                    <a href="https://food-order-web-app.vercel.app"><li>Admin</li></a>
+                    <a href="https://tomato-admin-puce.vercel.app"><li>Admin</li></a>
                 </ul>
             </div>
            </div>
