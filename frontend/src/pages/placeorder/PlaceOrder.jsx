@@ -44,9 +44,8 @@ const PlaceOrder = () => {
       headers: { token },
     });
     if (response.data.success) {
-      // const {session_url} = response.data
-      // window.location.replace(session_url)
-      console.log(response.data);
+      const {session_url} = response.data
+      window.location.replace(session_url)
     } else {
       alert("You need To Login first !!");
     }

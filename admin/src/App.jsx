@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   
-  //const url = "https://tomato-backend-v1.onrender.com"
-  const url = "http://localhost:4000"
+  const url = "https://tomato-backend-v1.onrender.com"
+
 
 
   return (

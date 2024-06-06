@@ -1,12 +1,13 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list, menu_list } from "../assets/assets";
+import { menu_list } from "../assets/assets";
 import axios from "axios";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
-    const url = "https://tomato-backend-v1.onrender.com"
-    
+   const url = "https://tomato-backend-v1.onrender.com"
+     //const url = "http://localhost:4000"
+
     const [food_list, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("")
