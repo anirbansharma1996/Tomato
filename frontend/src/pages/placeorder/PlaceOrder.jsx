@@ -44,6 +44,7 @@ const PlaceOrder = () => {
     if (response.data.success) {
       const {session_url} = response.data
       window.location.replace(session_url)
+      console.log(response.data)
     }
     else{
       alert("You need To Login first !!!")
