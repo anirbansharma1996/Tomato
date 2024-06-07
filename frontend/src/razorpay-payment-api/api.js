@@ -18,12 +18,12 @@ export const initializeRazorpay = (order, url) => {
         });
     },
     prefill: {
-      name: "Customer Name",
-      email: "customer@example.com",
-      contact: "9999999999"
+      name: "Tomato. | IN",
+      email: "support@complain.com",
+      contact: "1800 123 888"
     },
     theme: {
-      color: "#3399cc"
+      color: "#FF4C24"
     }
   };
 
