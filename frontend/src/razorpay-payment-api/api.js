@@ -5,8 +5,8 @@ export const initializeRazorpay = (order, url) => {
     key: "rzp_test_1iWY82wcU8tca7",
     amount: order.amount,
     currency: order.currency,
-    name: "Your Company Name",
-    description: "Test Transaction",
+    name: "Tomato. | IN",
+    description: "order payment",
     order_id: order.id,
     handler: function (response) {
       axios.post(`${url}/api/payment/verify`, response)
