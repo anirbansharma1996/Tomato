@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import {initializeRazorpay} from "../../razorpay-payment-api/api.js"
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, food_list, cartItems, url } =
@@ -45,8 +46,12 @@ const PlaceOrder = () => {
     });
     if (response.data.success) {
       const {session_url} = response.data
-      console.log(session_url)
-      window.location.replace(session_url)
+      //--------------
+      const { order } = response.data;
+      initializeRazorpay(order, url);
+      //-----------------
+      // console.log(session_url)
+      // window.location.replace(session_url)
     } else {
       alert("You need To Login first !!");
     }

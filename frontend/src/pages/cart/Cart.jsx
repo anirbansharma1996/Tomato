@@ -15,7 +15,7 @@ const Cart = () => {
   } = useContext(StoreContext);
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(false);
-  console.log("token -> ", token);
+ 
 
   return (
     <div className="cart">
