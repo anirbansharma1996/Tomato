@@ -11,7 +11,7 @@ export const initializeRazorpay = (order, url) => {
     handler: function (response) {
       axios.post(`${url}/api/payment/verify`, response)
         .then(() => {
-          window.location.href = `https://tomato-gray-five.vercel.app`;
+          window.location.href = `https://tomato-gray-five.vercel.app/myorders`;
         })
         .catch(() => {
           window.location.href = `https://tomato-gray-five.vercel.app`;
