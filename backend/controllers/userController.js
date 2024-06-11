@@ -4,8 +4,8 @@ import bcrypt from "bcrypt";
 import validator from "validator";
 
 // Create a token for a user
-const createToken = (id, expire) => {
-  return jwt.sign({ id, expire }, process.env.JWT_SECRET);
+const createToken = (id, expire, username) => {
+  return jwt.sign({ id, expire, username }, process.env.JWT_SECRET);
 };
 // Login user
 const loginUser = async (req, res) => {
@@ -30,7 +30,7 @@ const loginUser = async (req, res) => {
 
     // Create a token
     const expire = Math.floor(Date.now() / 1000) + 7 * 24 * 60 * 60;
-    const token = createToken(user._id, expire);
+    const token = createToken(user._id, expire, user.name);
     return res.status(200).json({ success: true, token });
   } catch (error) {
     return res.status(500).json({ success: false, message: "Server error" });
@@ -85,7 +85,7 @@ const registerUser = async (req, res) => {
 
     // Create a token
     const expire = Math.floor(Date.now() / 1000) + 7 * 24 * 60 * 60;
-    const token = createToken(user._id, expire);
+    const token = createToken(user._id, expire, user.name);
 
     return res.status(201).json({ success: true, token });
   } catch (error) {

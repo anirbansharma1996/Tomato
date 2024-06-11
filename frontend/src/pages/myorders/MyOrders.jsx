@@ -3,11 +3,15 @@ import "./MyOrders.css";
 import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
 import { assets } from "../../assets/assets";
+import { jwtDecode } from "jwt-decode";
 
 const MyOrders = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const { url, token } = useContext(StoreContext);
+
+  const decode = token ? jwtDecode(token) : null;
+
 
   const fetchOrders = async () => {
     try {
@@ -25,7 +29,6 @@ const MyOrders = () => {
     }
   };
 
-
   useEffect(() => {
     if (token) {
       fetchOrders();
@@ -33,7 +36,7 @@ const MyOrders = () => {
   }, [token]);
   return (
     <div className="my-orders">
-      <h2>My Orders</h2>
+      {loading ? <h2>Orders</h2> : <h2>{decode?.username}'s Orders</h2>}
       {loading && (
         <div className="spinner-parent">
           <div className="spinner"></div>

@@ -1,15 +1,19 @@
-import React from 'react'
-import "./Navbar.css"
-import {assets} from "../../assets/assets"
+import React from "react";
+import "./Navbar.css";
+import { assets } from "../../assets/assets";
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
-        <img className='logo' src={assets.logo} alt="" />
-        <img className='profile' src={assets.user_logo} alt="" />
-
+    <div className="navbar">
+      <a
+        href="https://tomato-gray-five.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="logo" src={assets.logo} alt="" />
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
