@@ -1,3 +1,3 @@
 ![main](home.png)
 
-Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.
+Tomato is a dynamic and user-friendly clone of Zomato, designed to provide a seamless experience for food enthusiasts. This project showcases my skills in building modern web applications using the MERN stack. Tomato allows users to explore a variety of restaurants, browse through menus, and read reviews, making it easier to decide where to dine next. The site features responsive design, intuitive navigation, and robust backend integration to ensure smooth and efficient performance.Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.
