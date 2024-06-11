@@ -1,15 +1,72 @@
-.food-display{
-    margin-top: 30px;
+.food-display {
+  margin-top: 30px;
+}
+.food-display h2 {
+  font-size: max(2vw, 24px);
+  font-weight: 600;
+}
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
 
+.gif-bike-parent {
+  position: relative;
+  margin-top: 2rem;
+  height: 200px;
+  overflow: hidden;
 }
-.food-display h2{
-    font-size: max(2vw,24px);
-    font-weight: 600;
+.gif-bike-parent h4 {
+  position: absolute;
+  top: 90%;
+  left: 48%;
 }
-.food-display-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-    margin-top: 30px;
-    gap: 30px;
-    row-gap: 50px;
+
+.gif-bike {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: moveRight 5s linear infinite;
+  width: 22%;
+}
+
+@keyframes moveRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .gif-bike {
+    width: 52%;
+  }
+  .gif-bike-parent h4 {
+    position: absolute;
+    top: 90%;
+    left: 45%;
+  }
+}
+@media (max-width: 500px) {
+  .gif-bike {
+    margin-top: 2rem;
+    width: 70%;
+  }
+  .gif-bike-parent {
+    position: relative;
+    margin-top: 2rem;
+    height: 230px;
+    overflow: hidden;
+  }
+  .gif-bike-parent h4 {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+  }
 }

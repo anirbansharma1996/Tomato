@@ -35,6 +35,31 @@
     cursor: pointer;
     color: #454545;
 }
+
+.spinner-parent {
+    position: relative;
+    text-align: center;
+    height: 20vh;
+}
+.my-orders .spinner{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    place-self: center;
+    border: 10px solid #bdbdbd;
+    border-top-color: tomato;
+    border-radius: 50%;
+    animation: rotate 1s infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 @media (max-width:900px) {
     .my-orders-order{
         grid-template-columns: 1fr 2fr 1fr;
@@ -44,5 +69,9 @@
     .my-orders-order button{
         font-size: 10px;
     }
-    
+    .my-orders .spinner{
+        position: absolute;
+        top: 30%;
+        left: 34%;
+    }
 }
