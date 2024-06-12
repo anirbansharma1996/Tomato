@@ -57,7 +57,6 @@ const paymentVerification = async (req, res) => {
         razorpay_signature,
       });
     }
-
     res.redirect(`https://tomato-gray-five.vercel.app`);
   } catch (error) {
     res.status(500).send(error);

@@ -18,7 +18,7 @@ const List = ({ url }) => {
       toast.error("Error");
     }
   };
-  console.log(loading);
+
   const removeFood = async (foodId) => {
     const response = await axios.post(`${url}/api/food/remove`, { id: foodId });
     await fetchList();

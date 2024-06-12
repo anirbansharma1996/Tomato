@@ -1,0 +1,51 @@
+.admin-home {
+  width: 80%;
+  margin: 1rem 1rem;
+  text-align: center;
+}
+.admin-home h3 {
+  font-size: 20px;
+  color: rgb(94, 93, 93);
+}
+.admin-home p {
+  font-size: 15px;
+}
+.admin-home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dashed;
+  padding: 10px;
+  gap: 5px;
+  margin: 5px;
+}
+.admin-home-fooditem,
+.admin-home-totalorders,
+.admin-home-totalbill {
+    border: 1px solid ;
+    padding: 10px;
+    width: 100%;
+}
+.admin-home-totalbill-profit{
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    border: 1px dashed;
+    margin: 5px;
+}
+.admin-home-allusers > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border: 1px dashed;
+    margin: 5px;
+    padding: 5px;
+}
+
+@media (max-width:800px) {
+    .admin-home-allusers > div{
+        display: flex;
+        flex-direction: column;
+    }
+}

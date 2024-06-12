@@ -7,10 +7,11 @@ import  List from "./pages/list/List"
 import Orders from "./pages/orders/Orders"
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/home/Home'
 
 const App = () => {
   
-const url = "https://tomato-backend-v1.onrender.com"
+ const url = "https://tomato-backend-v1.onrender.com"
 //const url = "http://localhost:4000"
 
 
@@ -22,6 +23,7 @@ const url = "https://tomato-backend-v1.onrender.com"
        <div className="app-content">
         <Sidebar/>
         <Routes>
+          <Route path="/" element={<Home url={url}/>}/>
           <Route path="/add" element={<Add url={url}/>}/>
           <Route path="/list" element={<List url={url}/>}/>
           <Route path="/orders" element={<Orders  url={url}/>}/>

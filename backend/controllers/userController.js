@@ -7,6 +7,16 @@ import validator from "validator";
 const createToken = (id, expire, username) => {
   return jwt.sign({ id, expire, username }, process.env.JWT_SECRET);
 };
+//get all users
+const getUser = async (req, res) => {
+  try {
+    const users = await userModel.find();
+    return res.status(200).json({ success: false, data: users });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: "Server error" });
+  }
+};
+
 // Login user
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
@@ -94,4 +104,4 @@ const registerUser = async (req, res) => {
   }
 };
 
-export { loginUser, registerUser };
+export { loginUser, registerUser, getUser };
