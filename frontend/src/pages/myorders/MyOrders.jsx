@@ -4,6 +4,7 @@ import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
 import { assets } from "../../assets/assets";
 import { jwtDecode } from "jwt-decode";
+import gif from "../../assets/giphy.gif"
 
 const MyOrders = () => {
   const [data, setData] = useState([]);
@@ -38,9 +39,10 @@ const MyOrders = () => {
     <div className="my-orders">
       {loading ? <h2>Orders</h2> : <h2>{decode?.username}'s Orders</h2>}
       {loading && (
-        <div className="spinner-parent">
-          <div className="spinner"></div>
-        </div>
+       <div className="gif-bike-parent">
+       <img className="gif-bike" src={gif} alt={'loading...'} />
+       <h4>Loading...</h4>
+     </div>
       )}
       {!loading && (
         <div className="container">
