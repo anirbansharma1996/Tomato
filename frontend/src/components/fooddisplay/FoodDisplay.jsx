@@ -6,7 +6,7 @@ import gif from "../../assets/giphy.gif"
 
 const FoodDisplay = ({ category }) => {
   const { food_list, loading } = useContext(StoreContext);
-  console.log(food_list);
+
   return (
     <div className="food-display" id="food-display">
       <h2>Top Dishes Near You</h2>
